@@ -1,0 +1,22 @@
+Global:
+  use_gpu: True
+  epoch_num: 100
+  save_model_dir: ./output
+  save_epoch_step: 5
+  learning_rate: 0.001
+  # Note that we have replaced empty characters with ' ', that is, the 'space'.
+  character_dict_path: ./configs/dict.txt
+  # The width of the image is at least four times the max_text_length.
+  max_text_length: 5
+
+Train:
+  data_dir: ./data/train
+  label_file_dir: ./data/train/label.txt
+  shuffle: True
+  batch_size: 16
+
+Test:
+  data_dir: ./data/test
+  label_file_dir: ./data/test/label.txt
+  shuffle: False
+  batch_size: 16
